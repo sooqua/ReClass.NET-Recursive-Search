@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CloseRemoteProcess.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlRemoteProcess.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="DisassembleCode.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumerateProcesses.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumerateRemoteSectionsAndModules.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="IsProcessValid.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenRemoteProcess.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadRemoteMemory.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteRemoteMemory.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Debugger.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\decoder.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\distorm.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\instructions.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\insts.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\mnemonics.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\operands.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\prefix.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\distorm\src\textdefs.c">
+      <Filter>Dependencies\distorm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\DistormHelper.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exports.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{9285bf7e-f1bc-42eb-b760-942eeefb0133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Functions">
+      <UniqueIdentifier>{b74771cf-fe41-431f-b0fe-91f421240d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\distorm">
+      <UniqueIdentifier>{4b8b2ee0-6a06-4e69-bce3-ff446bfa6b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{faf06b55-02ad-4707-a65d-37e1c0d13640}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NativeCore.hpp" />
+    <ClInclude Include="..\ReClassNET_Plugin.hpp" />
+    <ClInclude Include="..\Shared\DistormHelper.hpp">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\Keys.hpp">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\include\distorm.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\include\mnemonics.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\config.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\decoder.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\instructions.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\insts.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\operands.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\prefix.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\textdefs.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\wstring.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\distorm\src\x86defs.h">
+      <Filter>Dependencies\distorm</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

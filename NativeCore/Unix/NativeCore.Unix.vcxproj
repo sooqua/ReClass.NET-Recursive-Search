@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{48c5258a-fa49-4173-aee5-0fca5190dff2}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>NativeCore</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>NativeCore</TargetName>
+    <TargetExt>.so</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(PlatformTarget)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>NativeCore</TargetName>
+    <TargetExt>.so</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(PlatformTarget)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <TargetName>NativeCore</TargetName>
+    <TargetExt>.so</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(PlatformTarget)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <TargetName>NativeCore</TargetName>
+    <TargetExt>.so</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(PlatformTarget)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Dependencies\distorm\src\decoder.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\distorm.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\instructions.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\insts.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\mnemonics.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\operands.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\prefix.c" />
+    <ClCompile Include="..\Dependencies\distorm\src\textdefs.c" />
+    <ClCompile Include="..\Shared\DistormHelper.cpp" />
+    <ClCompile Include="CloseRemoteProcess.cpp" />
+    <ClCompile Include="ControlRemoteProcess.cpp" />
+    <ClCompile Include="Debugger.cpp" />
+    <ClCompile Include="DisassembleCode.cpp" />
+    <ClCompile Include="EnumerateProcesses.cpp" />
+    <ClCompile Include="EnumerateRemoteSectionsAndModules.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="IsProcessValid.cpp" />
+    <ClCompile Include="OpenRemoteProcess.cpp" />
+    <ClCompile Include="ReadRemoteMemory.cpp" />
+    <ClCompile Include="WriteRemoteMemory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependencies\distorm\include\distorm.h" />
+    <ClInclude Include="..\Dependencies\distorm\include\mnemonics.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\config.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\decoder.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\instructions.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\insts.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\operands.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\prefix.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\textdefs.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\wstring.h" />
+    <ClInclude Include="..\Dependencies\distorm\src\x86defs.h" />
+    <ClInclude Include="..\ReClassNET_Plugin.hpp" />
+    <ClInclude Include="..\Shared\DistormHelper.hpp" />
+    <ClInclude Include="..\Shared\Keys.hpp" />
+    <ClInclude Include="NativeCore.hpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PositionIndependentCode>true</PositionIndependentCode>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalIncludeDirectories>../Dependencies/distorm/include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>RECLASSNET64</PreprocessorDefinitions>
+      <AdditionalOptions>-m64 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-m64 %(AdditionalOptions)</AdditionalOptions>
+      <LibraryDependencies>stdc++fs</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PositionIndependentCode>true</PositionIndependentCode>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalIncludeDirectories>../Dependencies/distorm/include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>RECLASSNET64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>-m64 %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <LinkTimeOptimization>true</LinkTimeOptimization>
+      <ExceptionHandling>Disabled</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>stdc++fs</LibraryDependencies>
+      <AdditionalOptions>-m64 %(AdditionalOptions)</AdditionalOptions>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <PositionIndependentCode>true</PositionIndependentCode>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalIncludeDirectories>../Dependencies/distorm/include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-m32 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>RECLASSNET32</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-m32 %(AdditionalOptions)</AdditionalOptions>
+      <LibraryDependencies>stdc++fs</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <PositionIndependentCode>true</PositionIndependentCode>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalIncludeDirectories>../Dependencies/distorm/include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-m32 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>RECLASSNET32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <LinkTimeOptimization>true</LinkTimeOptimization>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <ExceptionHandling>Disabled</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-m32 %(AdditionalOptions)</AdditionalOptions>
+      <LibraryDependencies>stdc++fs</LibraryDependencies>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
